@@ -1,6 +1,6 @@
-# {{ name }}
+# testing
 
-> {{ description }}
+> Nuxt.js + Vuetify.js project
 
 ## Build Setup
 
