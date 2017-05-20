@@ -1,8 +1,8 @@
 # Starter
 
-A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
+A [Nuxt.js](https://github.com/nuxt/nuxt.js) + [Vuetify.js](https://github.com/vuetifyjs/vuetify) starter project template without the distraction of a complicated development environment.
 
-Live demo: https://starter.nuxtjs.org
+Live demo: http://nuxt-vuetify-starter.surge.sh/ (created with `nuxt generate`)
 
 ## Installation
 
