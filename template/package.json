@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-vuetify-starter",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "Nuxt.js + Vuetify.js project",
-  "author": "John Leider <john.j.leider@gmail.com>",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -12,7 +12,7 @@
   "dependencies": {
     "nuxt": "0.10.7",
     "vue-server-renderer": "latest",
-    "vuetify": "latest"
+    "vuetify": "^0.13.0"
   },
   "devDependencies": {
     "stylus": "^0.54.5",
