@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark toolbar footer>
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
