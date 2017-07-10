@@ -53,9 +53,7 @@
     </v-toolbar>
     <main>
       <v-container fluid>
-        <v-slide-y-transition mode="out-in">
-          <nuxt />
-        </v-slide-y-transition>
+        <nuxt />
       </v-container>
     </main>
     <v-navigation-drawer
