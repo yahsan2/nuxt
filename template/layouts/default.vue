@@ -1,14 +1,14 @@
 <template>
-  <v-app dark toolbar footer>
+  <v-app light>
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
       :clipped="clipped"
       v-model="drawer"
+      enable-resize-watcher
     >
       <v-list>
-        <v-list-tile 
-          router
+        <v-list-tile
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
@@ -23,22 +23,22 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed>
-      <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn 
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-btn
         icon
-        @click.native.stop="miniVariant = !miniVariant"
+        @click.stop="miniVariant = !miniVariant"
       >
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
       <v-btn
         icon
-        @click.native.stop="clipped = !clipped"
+        @click.stop="clipped = !clipped"
       >
         <v-icon>web</v-icon>
       </v-btn>
       <v-btn
         icon
-        @click.native.stop="fixed = !fixed"
+        @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
       </v-btn>
@@ -46,7 +46,7 @@
       <v-spacer></v-spacer>
       <v-btn
         icon
-        @click.native.stop="rightDrawer = !rightDrawer"
+        @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
       </v-btn>
@@ -62,7 +62,7 @@
       v-model="rightDrawer"
     >
       <v-list>
-        <v-list-tile @click.native="right = !right">
+        <v-list-tile @click="right = !right">
           <v-list-tile-action>
             <v-icon light>compare_arrows</v-icon>
           </v-list-tile-action>
@@ -84,8 +84,8 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+          { to: '/', title: 'Welcome', icon: 'apps' },
+          { to: '/inspire', title: 'Inspire', icon: 'bubble_chart' }
         ],
         miniVariant: false,
         right: true,
