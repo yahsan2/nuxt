@@ -6,6 +6,7 @@
       :clipped="clipped"
       v-model="drawer"
       enable-resize-watcher
+      app
     >
       <v-list>
         <v-list-tile
@@ -22,7 +23,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed>
+    <v-toolbar fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-btn
         icon
@@ -52,14 +53,17 @@
       </v-btn>
     </v-toolbar>
     <main>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <v-content>
+        <v-container fluid>
+          <nuxt />
+        </v-container>
+      </v-content>
     </main>
     <v-navigation-drawer
       temporary
       :right="right"
       v-model="rightDrawer"
+      app
     >
       <v-list>
         <v-list-tile @click="right = !right">
@@ -70,7 +74,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed">
+    <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
   </v-app>
