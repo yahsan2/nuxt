@@ -43,7 +43,9 @@ module.exports = {
       ]
     },
     {{/alacarte}}
-    vendor: ['vuetify'],
+    vendor: [
+      '~/plugins/vuetify.js'
+    ],
     extractCSS: true,
     /*
     ** Run ESLint on save
