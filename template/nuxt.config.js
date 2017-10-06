@@ -1,3 +1,8 @@
+{{#alacarte}}
+const nodeExternals = require('webpack-node-externals')
+const resolve = (dir) => require('path').join(__dirname, dir)
+{{/alacarte}}
+
 module.exports = {
   /*
   ** Headers of the page
@@ -26,6 +31,18 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    {{#alacarte}}
+    babel: {
+      plugins: [
+        ["transform-imports", {
+          "vuetify": {
+            "transform": "vuetify/es5/components/${member}",
+            "preventFullImport": true
+          }
+        }]
+      ]
+    },
+    {{/alacarte}}
     vendor: ['vuetify'],
     extractCSS: true,
     /*
@@ -40,6 +57,26 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      {{#alacarte}}
+      if (ctx.isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vuetify/]
+          })
+        ]
+      }
+
+      config.module.rules.forEach(rule => {
+        if (rule.test.toString() === '/\\.styl(us)?$/') {
+          rule.use.push({
+            loader: 'vuetify-loader',
+            options: {
+              theme: resolve('./assets/style/theme.styl')
+            }
+          })
+        }
+      })
+      {{/alacarte}}
     }
   }
 }
