@@ -27,19 +27,19 @@
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-btn 
         icon
-        @click.native.stop="miniVariant = !miniVariant"
+        @click.stop="miniVariant = !miniVariant"
       >
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
       <v-btn
         icon
-        @click.native.stop="clipped = !clipped"
+        @click.stop="clipped = !clipped"
       >
         <v-icon>web</v-icon>
       </v-btn>
       <v-btn
         icon
-        @click.native.stop="fixed = !fixed"
+        @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
       </v-btn>
@@ -47,7 +47,7 @@
       <v-spacer></v-spacer>
       <v-btn
         icon
-        @click.native.stop="rightDrawer = !rightDrawer"
+        @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
       </v-btn>
