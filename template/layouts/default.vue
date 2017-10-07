@@ -13,6 +13,7 @@
           :to="item.to"
           :key="i"
           v-for="(item, i) in items"
+          exact
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
