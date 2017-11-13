@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      persistent
       :mini-variant="miniVariant"
       :clipped="clipped"
       v-model="drawer"
+      fixed
       app
     >
       <v-list>
@@ -53,18 +53,16 @@
         <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
-    <main>
-      <v-content>
-        <v-container>
-          <nuxt />
-        </v-container>
-      </v-content>
-    </main>
+    <v-content>
+      <v-container>
+        <nuxt />
+      </v-container>
+    </v-content>
     <v-navigation-drawer
       temporary
       :right="right"
       v-model="rightDrawer"
-      app
+      fixed
     >
       <v-list>
         <v-list-tile @click.native="right = !right">
