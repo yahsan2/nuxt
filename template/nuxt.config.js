@@ -67,17 +67,6 @@ module.exports = {
           })
         ]
       }
-
-      config.module.rules.forEach(rule => {
-        if (rule.test.toString() === '/\\.styl(us)?$/') {
-          rule.use.push({
-            loader: 'vuetify-loader',
-            options: {
-              theme: resolve('./assets/style/theme.styl')
-            }
-          })
-        }
-      })
       {{/alacarte}}
     }
   }
