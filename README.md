@@ -2,8 +2,6 @@
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) + [Vuetify.js](https://github.com/vuetifyjs/vuetify) starter project template without the distraction of a complicated development environment.
 
-Live demo: http://nuxt-vuetify-starter.surge.sh/ (created with `nuxt generate`)
-
 ## Installation
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
