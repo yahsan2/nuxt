@@ -1,5 +1,6 @@
 <template>
-  <v-layout column justify-center align-center>
+  {{#alacarte}}
+ <v-layout column justify-center align-center>
     <v-flex xs12 sm8 md6>
       <div class="text-xs-center">
         <img src="/v.png" alt="Vuetify.js" class="mb-5" />
@@ -27,4 +28,9 @@
       </v-card>
     </v-flex>
   </v-layout>
+  {{else}}
+<a>a</>
+{{/alacarte}}
+
+
 </template>
